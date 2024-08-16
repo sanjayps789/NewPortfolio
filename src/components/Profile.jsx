@@ -13,7 +13,7 @@ function Profile() {
                                 <span   className='  ms-4'>Sanjay PS</span></h1>
                             <h3 className='text-white py-2'>MERN STACK DEVELOPER</h3>
                             <div className="d-flex justify-content-start   align-items-center">
-                                <Button target='_blank' href='https://drive.google.com/file/d/1wEaM43Og_EJkzifWS_JuCx2T3FYgX3Sd/view?usp=sharing' variant="light" className='rounded-pill px-3 py-2 fw-medium'>Download CV</Button>
+                                <Button target='_blank' href='https://drive.google.com/file/d/1ULll-S1hLtFu8RhY8yDeMWlLi7yJblos/view?usp=sharing' variant="light" className='rounded-pill px-3 py-2 fw-medium'>Download CV</Button>
                                 <i className="fa-brands fa-github fs-1 ps-lg-5 ps-3"></i>
                                 <i className="fa-brands fa-linkedin fs-1 ps-lg-5 ps-3 "></i>
                             </div>
