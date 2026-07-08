@@ -1,10 +1,10 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import image from '../assets/sanjay.png'
+import image from '/assets/sanjay.png'
 
 function Profile() {
     return (
-        <div id='home' style={{ paddingTop:'200px' }} className='w-100 d-flex align-items-center justify-content-center bg-black '>
+        <div id='home' style={{ paddingTop:'100px' }} className='w-100 d-flex align-items-center justify-content-center bg-black '>
             <div style={{width:'90%'}} className="container ">
                 <div className="row d-flex align-items-center justify-content-center w-100">
                     <div className="col-lg-6 d-flex align-items-center justify-content-center flex-flex-sm-column-reverse">

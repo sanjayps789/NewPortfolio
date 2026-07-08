@@ -3,7 +3,7 @@ import Loader1 from './Loader1'
 
 function About() {
     return (
-        <div id='about' style={{ height: '90vh' }} className='bg-black d-flex align-items-center justify-content-center w-100'>
+        <div id='about' style={{ minHeight: '90vh' }} className='bg-black d-flex align-items-center justify-content-center w-100'>
 
             <div style={{width:'90%'}} className='container'>
                 <h1 className='text-white text-center fw-bold py-3'>About Me</h1>

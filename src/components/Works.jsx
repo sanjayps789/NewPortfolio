@@ -11,33 +11,53 @@ function Works() {
 
     useEffect(() => {
         handleData()
-    },[])
+    }, [])
     return (
-        <div id='works' style={{minHeight:'80vh'}} className='w-100 d-flex align-items-center justify-content-center bg-black flex-column'>
+        <div id='works' style={{ minHeight: '80vh' }} className='w-100 d-flex align-items-center justify-content-center bg-black flex-column'>
             <h1 className='text-white fw-bold pb-4'>My Works</h1>
             <div style={{ width: '90%' }} className="container">
-                <div className="row py-5 mb-5">
-                   { workData.length > 0?
-                   workData.map((item,index)=>(
-                    <div key={index} className="col-lg-3 col-md-4 d-flex align-items-center justify-content-center">
-                    <Card  className=' mb-5 p-2 py-4 rounded-4' 
-                    style={{
-                         width: '20rem',
-                          height: '22rem',
-                          backgroundColor:'#212121'}}>
-                        <Card.Img style={{height:'150px'}} className='img-fluid rounded' variant="top" src={item.image} />
-                        <Card.Body>
-                            <Card.Title style={{color:'white'}} className='fw-bold'>{item?.title}</Card.Title>
-                            <Card.Text style={{color:'white'}}>{item?.description.slice(0,50)}...</Card.Text>
-                            <div className='d-flex align-items-center justify-content-between'>
-                                <Link target="_blank" to={item?.github}><i  className="fa-brands fa-github fs-3"></i></Link>
-                                <Link target="_blank" to={item?.url}><i className="fa-solid fa-link fs-3 ps-3"></i></Link>
+                <div className="row g-4 py-5">
+                    {workData.length > 0 ? (
+                        workData.map((item) => (
+                            <div key={item.id} className="col-lg-4 col-md-6">
+                                <div className="project-card">
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="project-image"
+                                    />
+
+                                    <div className="project-overlay">
+
+                                        <h4>{item.title}</h4>
+
+                                        <p>
+                                            {item.description.length > 120
+                                                ? item.description.slice(0, 120) + "..."
+                                                : item.description}
+                                        </p>
+
+                                        {item.url && (
+                                            <Link
+                                                to={item.url}
+                                                target="_blank"
+                                                title="Visit Website"
+                                                rel="noreferrer"
+                                                className="visit-btn"
+                                            >
+                                                Visit Website
+                                                <i className="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+                                            </Link>
+                                        )}
+
+                                    </div>
+
+                                </div>
                             </div>
-                            <i className="fa-solid "></i>
-                        </Card.Body>
-                    </Card>
-                </div>
-                   )):<div><h1>No Data Found</h1></div> }
+                        ))
+                    ) : (
+                        <h2 className="text-light text-center">No Projects Found</h2>
+                    )}
                 </div>
             </div>
         </div>
